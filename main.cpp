@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 bool compare (float speed) {
     return (speed >= -0.01) && (speed <= 0.01);
@@ -22,7 +23,7 @@ int main() {
     std::cin >> delta;
     speed = speed_result(speed, delta);
     while (!compare(speed)) {
-        std::cout << "Current speed: " << speed << std::endl;
+        std::cout << "Current speed: " << (round(speed * 10)) / 10 << std::endl;
         std::cout << "Input the speed increase: ";
         std::cin >> delta;
         speed = speed_result(speed, delta);
