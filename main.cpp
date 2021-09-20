@@ -23,7 +23,7 @@ int main() {
     std::cin >> delta;
     speed = speed_result(speed, delta);
     while (!compare(speed)) {
-        std::cout << "Current speed: " << (round(speed * 10)) / 10 << std::endl;
+        printf("Current speed: %3.1f \n", speed);
         std::cout << "Input the speed increase: ";
         std::cin >> delta;
         speed = speed_result(speed, delta);
